@@ -38,4 +38,23 @@ scaleddata_covmat_df.to_csv('cov_mat_scaleddata.csv')
 eigen_val, eigen_vect= eig(scaleddata_covmat)
 print(eigen_val)
 eigen_vect_df=pd.DataFrame(eigen_vect)
+
+#Step 4 sort the eigen values in descending order 
 eigen_vect_df.to_csv('cancerdata_covmat_eigen_vec.csv')
+
+
+#Step 5 sort the eigen values in descending order
+
+#step6  calcualte  val1 = eigenvalue/SUM(all eigen values)
+
+# step7 calculate the cummulative summation of val1
+
+# step8 select the top eigen values whose summation is  .97 to .99
+# and discard all the below eigen value and correcponding eigen vector
+# as 97 to 99 percent information about the data is stored in selected eigen values
+
+# most of te cases top 30 to 40 % eigen values contain more than 95% information
+# rrest of the eigen values and corresponding vectors and features can be removed from data
+
+
+
